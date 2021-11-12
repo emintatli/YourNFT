@@ -85,7 +85,9 @@ const resources = {
       "PAGES":"Pages",
       "PAGES_2":"Edit pages texts.",
       "DOC":"Documentation",
-      "INPUT_JSON_URL":"Enter your metadata (JSON) file url can be IPFS or URL."
+      "INPUT_JSON_URL":"Enter your metadata (JSON) file url can be IPFS or URL.",
+      "CONNECT_WALLET_ERR":"Please connect with your Metamask account.",
+      "METAMASK_NOT_CONNECTED":"Please be sure Metamask is logged in,then refresh your page."
 
     }
   },
@@ -170,7 +172,9 @@ const resources = {
       "PAGES":"Sayfalar",
       "PAGES_2":"Sayfa metinlerini düzenleyin.",
       "DOC":"Dokümantasyon",
-      "INPUT_JSON_URL":"Metadata (JSON) dosya urlnizi girin IPFS veya standart URL olabilir."
+      "INPUT_JSON_URL":"Metadata (JSON) dosya urlnizi girin IPFS veya standart URL olabilir.",
+      "CONNECT_WALLET_ERR":"Lütfen Metamask hesabınız ile giriş yapın.",
+      "METAMASK_NOT_CONNECTED":"Lütfen Metamask'ınıza giriş yaptığınıza emin olduktan sonra sayfayı yenileyin."
 
     }
   }

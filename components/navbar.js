@@ -6,6 +6,7 @@ import Web3 from 'web3';
 import {loadContract} from "../utils/loadContract"
 import detectEthereumProvider from '@metamask/detect-provider';
 import { useTranslation } from 'react-i18next';
+import { ToastContainer, toast } from 'react-toastify';
 import Image from 'next/image'
 function Navbar(){
   const [apiData,setapiData]=useState("");
@@ -37,44 +38,45 @@ function Navbar(){
       whiteListPrice:(await contract.whiteListPrice()).toString(10),
       whiteListed:false
     }
-      await ethereum.request({
-        method: 'wallet_switchEthereumChain',
-        params: [{ chainId: info.chain }],
-      });
-      await window.ethereum.request({ method: 'eth_requestAccounts' })
-      const provider2=await detectEthereumProvider();
-      const web3api2=new Web3(provider2);
-      const account= (await web3api2.eth.getAccounts())[0];
-      dispatch(userActions.setWallet({wallet:account}))
-      setWallet(account)
     
-    const whiteListedBool=info.whitelist_address.filter((v)=>v==account);
-    if(whiteListedBool.length>0){
-      info={
-        ...info,
-        price:info.whiteListPrice,
-        whiteListed:true
-      }
-    }
+   
     setcontractData(info);
     setapiData(response);
     dispatch(userActions.setAlldata({apiData:response,contractData:info}))
     setLoading(false);
   },[]);
+  
+
 
   const loginMetamask=async()=>{
+    if(ethereum.isConnected()){
+     
+      await window.ethereum.request({ method: 'eth_requestAccounts' })
+      await ethereum.request({
+        method: 'wallet_switchEthereumChain',
+        params: [{ chainId: contractData.chain }],
+      });
     
-    await ethereum.request({
-      method: 'wallet_switchEthereumChain',
-      params: [{ chainId: contractData.chain }],
-    });
-    await window.ethereum.request({ method: 'eth_requestAccounts' })
-    const provider=await detectEthereumProvider();
-    const web3api=new Web3(provider);
-    const account= (await web3api.eth.getAccounts())[0];
-
-    dispatch(userActions.setWallet({wallet:account}))
-    setWallet(account)
+      const provider=await detectEthereumProvider();
+      const web3api=new Web3(provider);
+      const account= (await web3api.eth.getAccounts())[0];
+      const whiteListedBool=contractData.whitelist_address.filter((v)=>v==account);
+      if(whiteListedBool.length>0){
+        const info={
+          ...contractData,
+          price:contractData.whiteListPrice,
+          whiteListed:true
+        }
+        setcontractData(info);
+      }
+   
+      dispatch(userActions.setWallet({wallet:account}))
+      setWallet(account)
+    }
+    else{
+     toast(t("METAMASK_NOT_CONNECTED"))
+    }
+   
   }
 
 const [mobileNav,setMobileNav]=useState(false);
