@@ -22,7 +22,7 @@ function Navbar(){
     i18n.changeLanguage(response.lang, (err, t) => {
       t('key'); // -> same as i18next.t
     });
-    const provider=new Web3.providers.HttpProvider('https://ropsten.infura.io/v3/28e6a305c46440f5ade79261f21a317b');
+    const provider=new Web3.providers.HttpProvider('https://goerli.infura.io/v3/087c0c70b7694e038af9109e50de0ae2');
     const web3api=new Web3(provider);
     const contract=await loadContract("NFT",provider);
     let info={

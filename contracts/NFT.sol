@@ -14,7 +14,7 @@ contract NFT is ERC721URIStorage {
     address[] public whitelist;
     uint public totalMint=0;
     string public nftName="NFT";
-    string public chain="0x3";
+    string public chain="0x5";
 
     constructor() ERC721("NFT", "NFT") {
     }
