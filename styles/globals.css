@@ -1,6 +1,6 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+@import url("./bulma.min.css");
 @import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
-@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css";
+@import url("./fontawesome-free-6.0.0-beta2-web/css/all.min.css");
 html{
    background-color: #f3f3f3!important;
    height: 100vh;

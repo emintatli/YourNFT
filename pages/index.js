@@ -18,6 +18,7 @@ function Home() {
   const [txData,setTx]=useState("");
 
   const mintHandler=async()=>{
+
     if(walletData){
       await toast.promise(
         async()=>{
@@ -55,35 +56,35 @@ function Home() {
       pauseOnHover/>
        <div className="card">
        <div className="card-content">
-       <nav class="level">
-       <div class="level-item has-text-centered">
+       <nav className="level">
+       <div className="level-item has-text-centered">
     <div>
-      <p class="heading">{t("NFT_NAME_TITLE")}</p>
-      <p class="title">{contractData&&contractData.name}</p>
+      <p className="heading">{t("NFT_NAME_TITLE")}</p>
+      <p className="title">{contractData&&contractData.name}</p>
     </div>
   </div>
-  <div class="level-item has-text-centered">
+  <div className="level-item has-text-centered">
     <div>
-      <p class="heading">{t("NFT_SOLD_TITLE")}</p>
-      <p class="title">{contractData&&contractData.minted}</p>
+      <p className="heading">{t("NFT_SOLD_TITLE")}</p>
+      <p className="title">{contractData&&contractData.minted}</p>
     </div>
   </div>
-  <div class="level-item has-text-centered">
+  <div className="level-item has-text-centered">
     <div>
-      <p class="heading">{t("NFT_LEFT_TITLE")}</p>
-      <p class="title">{contractData&&(contractData.maxMintLimit-contractData.minted)||""}</p>
+      <p className="heading">{t("NFT_LEFT_TITLE")}</p>
+      <p className="title">{contractData&&(contractData.maxMintLimit-contractData.minted)||""}</p>
     </div>
   </div>
-  <div class="level-item has-text-centered">
+  <div className="level-item has-text-centered">
     <div>
-      <p class="heading">{t("NFT_TOTAL_SALES_TITLE")}</p>
-      <p class="title">{apiData&&contractData.price&&parseFloat((contractData.minted*Web3.utils.fromWei(contractData.price,"ether"))).toFixed(3)} {t("CURRENCY")}</p>
+      <p className="heading">{t("NFT_TOTAL_SALES_TITLE")}</p>
+      <p className="title">{apiData&&contractData.price&&parseFloat((contractData.minted*Web3.utils.fromWei(contractData.price,"ether"))).toFixed(3)} {t("CURRENCY")}</p>
     </div>
   </div>
-  <div class="level-item has-text-centered">
+  <div className="level-item has-text-centered">
     <div>
-      <p class="heading">{t("NFT_PRICE_TITLE")}</p>
-      <p class="title">{contractData.price&&Web3.utils.fromWei(contractData.price,"ether")} {t("CURRENCY")}</p>
+      <p className="heading">{t("NFT_PRICE_TITLE")}</p>
+      <p className="title">{contractData.price&&Web3.utils.fromWei(contractData.price,"ether")} {t("CURRENCY")}</p>
     </div>
   </div>
 </nav>
@@ -117,9 +118,9 @@ function Home() {
        <div className="card-content">
          <div className="is-flex is-align-items-center is-justify-content-space-between">
            <div className="is-flex is-align-items-center">
-         <button onClick={()=>{if(count>1){setCount(count-1)}}} className="button is-link"><b><i class="fas fa-minus"></i></b></button>
+         <button onClick={()=>{if(count>1){setCount(count-1)}}} className="button is-link"><b><i className="fas fa-minus"></i></b></button>
        <a className="pagination-link">{count}</a>
-       <button onClick={()=>{if(count<contractData.maxLength){setCount(count+1)}}} className="button is-link"><b><i class="fas fa-plus"></i></b></button>
+       <button onClick={()=>{if(count<contractData.maxLength){setCount(count+1)}}} className="button is-link"><b><i className="fas fa-plus"></i></b></button>
        </div>
        <div className="is-flex is-align-items-center">
          {t("NFT_PRICE_TITLE")}:
@@ -128,14 +129,14 @@ function Home() {
         </div>
         
 
-        {contractData.whiteListed&&<section class="hero is-link mt-2">
-  <div class="hero-body">
-    <p class="title">
+        {contractData.whiteListed&&<section className="hero is-link mt-2">
+  <div className="hero-body">
+    <p className="title">
       {t("WHITE_LISTED_NOTIFICATION")}
     </p>
   </div>
 </section>}
-        <button onClick={mintHandler} className={`button ${contractData.whiteListed?"is-success":"is-link"} mt-2 mint-button`}><b><i class="fas fa-chevron-circle-right mr-2"></i>MINT</b></button>
+        <button onClick={mintHandler} className={`button ${contractData.whiteListed?"is-success":"is-link"} mt-2 mint-button`}><b><i className="fas fa-chevron-circle-right mr-2"></i>MINT</b></button>
        </div>
        </div>
       </Content>

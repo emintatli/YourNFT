@@ -6,7 +6,7 @@ import Web3 from 'web3';
 import {loadContract} from "../utils/loadContract"
 import detectEthereumProvider from '@metamask/detect-provider';
 import { useTranslation } from 'react-i18next';
-import i18n from "i18next";
+import Image from 'next/image'
 function Navbar(){
   const [apiData,setapiData]=useState("");
   const { t, i18n } = useTranslation();
@@ -19,7 +19,6 @@ function Navbar(){
     const request=await fetch("/api/load");
     const response=await request.json();
     i18n.changeLanguage(response.lang, (err, t) => {
-      if (err) return console.log('', err);
       t('key'); // -> same as i18next.t
     });
     const provider=new Web3.providers.HttpProvider('https://ropsten.infura.io/v3/28e6a305c46440f5ade79261f21a317b');
@@ -38,8 +37,6 @@ function Navbar(){
       whiteListPrice:(await contract.whiteListPrice()).toString(10),
       whiteListed:false
     }
-
-      console.log(info)
       await ethereum.request({
         method: 'wallet_switchEthereumChain',
         params: [{ chainId: info.chain }],
@@ -81,12 +78,12 @@ function Navbar(){
 const [mobileNav,setMobileNav]=useState(false);
     return (
      <>
-     <div className={`${!loading&&"d-none"} full-load`}><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+     <div className={`${!loading&&"d-none"} full-load`}><div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
      <nav className="navbar px-3 card card-nav" role="navigation" aria-label="main navigation">
   <div className="navbar-brand">
     <a className="navbar-item">
     <Link href="/" className="is-flex is-align-items-center" >
-    <><img src="/blockchain.png" className="mr-2"/><b>{apiData&&apiData.nft_name}</b></>
+    <><Image width="30px" height="30px" src="/blockchain.png" className=""/><b className="ml-2">{apiData&&apiData.nft_name}</b></>
     </Link>
     
     </a>
@@ -140,20 +137,20 @@ const [mobileNav,setMobileNav]=useState(false);
       <div className="navbar-item is-flex is-align-items-center">
   
           <a onClick={loginMetamask} className="button is-primary">
-            <strong className="is-flex is-align-items-center"><img src="/metamask.png" className="mr-2"/><span className="mobile-short">{wallet?wallet:t("METAMASK_BUTTON")}</span></strong>
+            <strong className="is-flex is-align-items-center"><Image height="30px" width="30px" src="/metamask.png" className=""/><span className="mobile-short">{wallet?wallet:t("METAMASK_BUTTON")}</span></strong>
           </a>
         <div className={`${mobileNav&&"d-none"}`}>
         {apiData&&apiData.social.fb.status&&<a href={apiData&&apiData.social.fb.link} className="px-2">
-        <img src="/facebook.png"/>
+        <Image height="50px" width="50px" src="/facebook.png"/>
         </a>}
         {apiData&&apiData.social.tw.status&&<a href={apiData&&apiData.social.tw.link} className="px-2">
-        <img src="/twitter.png"/>
+        <Image height="50px" width="50px" src="/twitter.png"/>
         </a>}
         {apiData&&apiData.social.dc.status&&<a href={apiData&&apiData.social.dc.link} className="px-2">
-        <img src="/discord.png"/>
+        <Image height="50px" width="50px" src="/discord.png"/>
         </a>}
         {apiData&&apiData.social.medium.status&& <a href={apiData&&apiData.social.medium.link} className="px-2">
-        <img src="/medium.png"/>
+        <Image height="50px" width="50px" src="/medium.png"/>
         </a>}
         </div>
       </div>

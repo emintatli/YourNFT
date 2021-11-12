@@ -164,52 +164,52 @@ const changeNFTPrice=async()=>{
         <div className="card p-3 settings-align">
   
 
-<article class="message is-link">
-  <div class="message-header">
+<article className="message is-link">
+  <div className="message-header">
     <p>{t("ADMIN_SOC_SET")}</p>
   </div>
-  {apiData.social?<div class="message-body">
-        <input ref={fb} defaultChecked={apiData&&apiData.social.fb.status} type='checkbox' class='ios8-switch d-none' id='checkbox-5'/>
-        <label for='checkbox-5'>{t("FB_AC")}</label><br/><input ref={fblink} defaultValue={apiData&&apiData.social.fb.link} class="input is-link my-2" type="text" placeholder="Facebook adress"/>
-        <input ref={tw} defaultChecked={apiData&&apiData.social.tw.status} type='checkbox' class='ios8-switch d-none' id='checkbox-6'/>
-        <label for='checkbox-6'>{t("TW_AC")}</label><br/><input ref={twlink} defaultValue={apiData&&apiData.social.tw.link} class="input is-link my-2" type="text" placeholder="Twitter adress"/>
-        <input ref={dc} defaultChecked={apiData&&apiData.social.dc.status} type='checkbox' class='ios8-switch d-none' id='checkbox-7'/>
-        <label for='checkbox-7'>{t("DC_AC")}</label><br/><input ref={dclink} defaultValue={apiData&&apiData.social.dc.link} class="input is-link my-2" type="text" placeholder="Discord adress"/>
-        <input ref={medium} defaultChecked={apiData&&apiData.social.medium.status} type='checkbox' class='ios8-switch d-none' id='checkbox-8'/>
-        <label for='checkbox-8'>{t("MED_AC")}</label><br/><input ref={mediumlink} defaultValue={apiData&&apiData.social.medium.link} class="input is-link my-2" type="text" placeholder="Medium adress"/>
-    <button onClick={socialSaveHandler} class={`${loading&&"is-loading"} button is-link w-100`}>{t("SAVE")}</button>
-  </div>:<div class="message-body is-flex is-justify-content-center"><div class="lds-facebook"><div></div><div></div><div></div></div></div>}
+  {apiData.social?<div className="message-body">
+        <input ref={fb} defaultChecked={apiData&&apiData.social.fb.status} type='checkbox' className='ios8-switch d-none' id='checkbox-5'/>
+        <label htmlFor='checkbox-5'>{t("FB_AC")}</label><br/><input ref={fblink} defaultValue={apiData&&apiData.social.fb.link} className="input is-link my-2" type="text" placeholder="Facebook adress"/>
+        <input ref={tw} defaultChecked={apiData&&apiData.social.tw.status} type='checkbox' className='ios8-switch d-none' id='checkbox-6'/>
+        <label htmlFor='checkbox-6'>{t("TW_AC")}</label><br/><input ref={twlink} defaultValue={apiData&&apiData.social.tw.link} className="input is-link my-2" type="text" placeholder="Twitter adress"/>
+        <input ref={dc} defaultChecked={apiData&&apiData.social.dc.status} type='checkbox' className='ios8-switch d-none' id='checkbox-7'/>
+        <label htmlFor='checkbox-7'>{t("DC_AC")}</label><br/><input ref={dclink} defaultValue={apiData&&apiData.social.dc.link} className="input is-link my-2" type="text" placeholder="Discord adress"/>
+        <input ref={medium} defaultChecked={apiData&&apiData.social.medium.status} type='checkbox' className='ios8-switch d-none' id='checkbox-8'/>
+        <label htmlFor='checkbox-8'>{t("MED_AC")}</label><br/><input ref={mediumlink} defaultValue={apiData&&apiData.social.medium.link} className="input is-link my-2" type="text" placeholder="Medium adress"/>
+    <button onClick={socialSaveHandler} className={`${loading&&"is-loading"} button is-link w-100`}>{t("SAVE")}</button>
+  </div>:<div className="message-body is-flex is-justify-content-center"><div className="lds-facebook"><div></div><div></div><div></div></div></div>}
   
 </article>
 
-<article class="message is-link">
-  <div class="message-header">
+<article className="message is-link">
+  <div className="message-header">
     <p>{t("LANG_SETTINGS")}</p>
   </div>
-  <div class="message-body">
-  <div class="select is-link">
+  <div className="message-body">
+  <div className="select is-link">
   <select ref={langSelect}>
     <option value="EN" selected={apiData&&apiData.lang==="EN"}>English</option>
     <option value="TR" selected={apiData&&apiData.lang==="TR"}>Türkçe</option>
   </select>
 </div>
-<button onClick={langSaveHandler} class={`${loading&&"is-loading"} button is-link w-100 mt-2`}>{t("SAVE")}</button>
+<button onClick={langSaveHandler} className={`${loading&&"is-loading"} button is-link w-100 mt-2`}>{t("SAVE")}</button>
   </div>
 </article>
 
-<article class="message is-danger">
-  <div class="message-header">
+<article className="message is-danger">
+  <div className="message-header">
     <p>{t("CONTRACT_SETTINGS")}</p>
   </div>
-  <div class="message-body">
+  <div className="message-body">
     <label>{t("CONTRACT_NFT_PRICE")}</label>
-  <div className="is-flex mb-2"><input ref={NFTPrice} class="input is-danger mr-2" type="number" placeholder={t("CONTRACT_NFT_PRICE2")}/><button onClick={changeNFTPrice} class="button is-danger"><i class="fas fa-exclamation-triangle mr-2"></i>{t("SAVE")}</button></div>
+  <div className="is-flex mb-2"><input ref={NFTPrice} className="input is-danger mr-2" type="number" placeholder={t("CONTRACT_NFT_PRICE2")}/><button onClick={changeNFTPrice} className="button is-danger"><i className="fas fa-exclamation-triangle mr-2"></i>{t("SAVE")}</button></div>
   <label>{t("CONTRACT_WNFT_PRICE")}</label>
-  <div className="is-flex mb-2"><input ref={whiteListPrice} class="input is-danger mr-2" type="number" placeholder={t("CONTRACT_WNFT_PRICE2")}/><button onClick={whiteListPriceChangeHandler} class="button is-danger"><i class="fas fa-exclamation-triangle mr-2"></i>{t("SAVE")}</button></div>
+  <div className="is-flex mb-2"><input ref={whiteListPrice} className="input is-danger mr-2" type="number" placeholder={t("CONTRACT_WNFT_PRICE2")}/><button onClick={whiteListPriceChangeHandler} className="button is-danger"><i className="fas fa-exclamation-triangle mr-2"></i>{t("SAVE")}</button></div>
   <label>{t("CONTRACT_WNFT_ACC")}</label>
-  <div className="is-flex mb-2"><input ref={whiteListAcc} class="input is-danger mr-2" type="text" placeholder={t("CONTRACT_WNFT_ACC2")}/><button onClick={addWhiteListHandler} class="button is-danger"><i class="fas fa-exclamation-triangle mr-2"></i>{t("SAVE")}</button></div>
+  <div className="is-flex mb-2"><input ref={whiteListAcc} className="input is-danger mr-2" type="text" placeholder={t("CONTRACT_WNFT_ACC2")}/><button onClick={addWhiteListHandler} className="button is-danger"><i className="fas fa-exclamation-triangle mr-2"></i>{t("SAVE")}</button></div>
   <label>{t("CONTRACT_ADMIN")}</label>
-  <div className="is-flex mb-2"><input ref={changeAdminAccount} class="input is-danger mr-2" type="text" placeholder={t("CONTRACT_ADMIN2")}/><button onClick={changeAdminAccountHandler} class="button is-danger"><i class="fas fa-exclamation-triangle mr-2"></i>{t("SAVE")}</button></div>
+  <div className="is-flex mb-2"><input ref={changeAdminAccount} className="input is-danger mr-2" type="text" placeholder={t("CONTRACT_ADMIN2")}/><button onClick={changeAdminAccountHandler} className="button is-danger"><i className="fas fa-exclamation-triangle mr-2"></i>{t("SAVE")}</button></div>
   </div>
 </article>
 

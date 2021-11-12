@@ -69,12 +69,12 @@ function Control() {
       pauseOnHover/>
        <AdminNav active="pages"/>
 <div className="card">
-<section class="hero is-info">
-  <div class="hero-body">
-    <p class="title">
+<section className="hero is-info">
+  <div className="hero-body">
+    <p className="title">
       {t("PAGES")}
     </p>
-    <p class="subtitle">
+    <p className="subtitle">
       {t("PAGES_2")}
     </p>
   </div>
@@ -82,11 +82,11 @@ function Control() {
 </div>
 {apiData.pages?<div className="card p-3 settings-align">
   <label>{t("DOC")}</label>
-<textarea ref={doc} defaultValue={apiData&&apiData.pages.documentation} class="textarea is-info mb-3" placeholder={t("DOC")}></textarea>
+<textarea ref={doc} defaultValue={apiData&&apiData.pages.documentation} className="textarea is-info mb-3" placeholder={t("DOC")}></textarea>
 <label>{t("ABOUT_TITLE")}</label>
-<textarea ref={about} defaultValue={apiData&&apiData.pages.about} class="textarea is-info mb-3" placeholder={t("ABOUT_TITLE")}></textarea>
-<button onClick={docSaveHandler} class={`${loading&&"is-loading"} button is-info mb-3 w-100`}>{t("SAVE")}</button>
-</div>:<div class="card message-body is-flex is-justify-content-center"><div class="lds-facebook"><div></div><div></div><div></div></div></div>}
+<textarea ref={about} defaultValue={apiData&&apiData.pages.about} className="textarea is-info mb-3" placeholder={t("ABOUT_TITLE")}></textarea>
+<button onClick={docSaveHandler} className={`${loading&&"is-loading"} button is-info mb-3 w-100`}>{t("SAVE")}</button>
+</div>:<div className="card message-body is-flex is-justify-content-center"><div className="lds-facebook"><div></div><div></div><div></div></div></div>}
     </Content>
   );
 }

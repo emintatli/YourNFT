@@ -39,9 +39,9 @@ function Admin() {
     <Content bg="true">
            <div className="card">
        <div className="card-content">
-       <input ref={password} class="input is-primary" type="text" placeholder="Password"/>
-       <button onClick={loginHandler} class="button is-primary mt-2">{t("ADMIN_LOGIN")}</button>
-       {logState&&<div class="notification is-danger mt-2">
+       <input ref={password} className="input is-primary" type="text" placeholder="Password"/>
+       <button onClick={loginHandler} className="button is-primary mt-2">{t("ADMIN_LOGIN")}</button>
+       {logState&&<div className="notification is-danger mt-2">
  {t("ADMIN_WRONG_PASS")}
  </div>}
        </div>

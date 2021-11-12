@@ -21,7 +21,6 @@ function Control() {
   }
 
   const addNFTHandler=async(arrayNFT)=>{
-    console.log(arrayNFT)
     setLoading(true);
     if(localStorage.getItem("nft-jwt")){
       const res=await fetch("/api/addNFT",{
@@ -80,46 +79,46 @@ function Control() {
       <AdminNav active="nfts"/>
       <div className="card p-3">
       <div className="card p-3">
-      <section class="hero is-primary mb-2">
-  <div class="hero-body">
-    <p class="title">
+      <section className="hero is-primary mb-2">
+  <div className="hero-body">
+    <p className="title">
       {t("ADD_NFT")}
     </p>
-    <p class="subtitle">
+    <p className="subtitle">
      {t("ADD_NFT_2")}
     </p>
   </div>
 </section>
-      <input ref={json_one_url} class="input is-primary mb-2" type="text" placeholder={t("INPUT_JSON_URL")}/><br/>
-      <button onClick={addOne} class={`${loading&&"is-loading"} button is-primary w-100`}>{t("ADD")}</button>
+      <input ref={json_one_url} className="input is-primary mb-2" type="text" placeholder={t("INPUT_JSON_URL")}/><br/>
+      <button onClick={addOne} className={`${loading&&"is-loading"} button is-primary w-100`}>{t("ADD")}</button>
       </div>
       <div className="card p-3 mt-3">
-      <section class="hero is-warning mb-2">
-  <div class="hero-body">
-    <p class="title">
+      <section className="hero is-warning mb-2">
+  <div className="hero-body">
+    <p className="title">
       {t("NFT_IMPORT")}
     </p>
-    <p class="subtitle">
+    <p className="subtitle">
       {t("IMPORT_NFT_JSON")}
     </p>
   </div>
 </section>
-      <div class={`file is-warning is-boxed w-100 ${loading&&"disabled"}`}>
-  <label class="file-label w-100">
-    <input ref={uploadFile} class="file-input" type="file" name="resume" onChange={getFile} accept=".txt"/>
-    <span class="file-cta">
-      <span class="file-icon">
-        <i class="fas fa-cloud-upload-alt"></i>
+      <div className={`file is-warning is-boxed w-100 ${loading&&"disabled"}`}>
+  <label className="file-label w-100">
+    <input ref={uploadFile} className="file-input" type="file" name="resume" onChange={getFile} accept=".txt"/>
+    <span className="file-cta">
+      <span className="file-icon">
+        <i className="fas fa-cloud-upload-alt"></i>
       </span>
       {t("NFT_UPLOAD_FILE")}
-      <button class={`${loading&&"is-loading display"} button is-warning d-none`}>
+      <button className={`${loading&&"is-loading display"} button is-warning d-none`}>
         
       </button>
     </span>
   </label>
   
 </div>
-<a href="/demo.txt" class="button is-warning mt-2"><i class="fas fa-download mr-2"></i>{t("NFT_DOWNLOAD_EXAMPLE")}</a>
+<a href="/demo.txt" className="button is-warning mt-2"><i className="fas fa-download mr-2"></i>{t("NFT_DOWNLOAD_EXAMPLE")}</a>
 
       </div>
       </div>

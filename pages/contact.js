@@ -41,12 +41,12 @@ function Contact() {
       pauseOnFocusLoss
       draggable
       pauseOnHover/>
-        <section class="hero is-info">
-  <div class="hero-body">
-    <p class="title">
+        <section className="hero is-info">
+  <div className="hero-body">
+    <p className="title">
     {t("CONTACT_TITLE")}
     </p>
-    <p class="subtitle">
+    <p className="subtitle">
     {t("CONTACT_TITLE_2")}
     </p>
   </div>
@@ -57,25 +57,25 @@ function Contact() {
              <div className="card">
        <div className="card-content">
        <form ref={form} onSubmit={sendEmail}>
-       <div class="field">
-  <div class="control has-icons-left has-icons-right">
-    <input ref={formname} class="input is-link" type="text" placeholder={t("FORM_NAME")} name="user_name"/>
-    <span class="icon is-left">
-    <i class="fas fa-user"></i>
+       <div className="field">
+  <div className="control has-icons-left has-icons-right">
+    <input ref={formname} className="input is-link" type="text" placeholder={t("FORM_NAME")} name="user_name"/>
+    <span className="icon is-left">
+    <i className="fas fa-user"></i>
     </span>
   </div>
 </div>
 
-<div class="field ">
-  <div class="control has-icons-left has-icons-right">
-    <input ref={formemail} class="input is-link" type="email" placeholder={t("FORM_EMAIL")} name="user_email"/>
-    <span class="icon is-left">
-      <i class="fas fa-envelope"></i>
+<div className="field ">
+  <div className="control has-icons-left has-icons-right">
+    <input ref={formemail} className="input is-link" type="email" placeholder={t("FORM_EMAIL")} name="user_email"/>
+    <span className="icon is-left">
+      <i className="fas fa-envelope"></i>
     </span>
   </div>
 </div>
-<textarea ref={formtext} class="textarea is-link" placeholder={t("FORM_MESSAGE")} name="message"></textarea>
-<button type="submit" class={`${loading&&"is-loading"} button is-link mt-2`}><i class="fas fa-paper-plane mr-2"></i>{t("SUBMIT_BUTTON")}</button>
+<textarea ref={formtext} className="textarea is-link" placeholder={t("FORM_MESSAGE")} name="message"></textarea>
+<button type="submit" className={`${loading&&"is-loading"} button is-link mt-2`}><i className="fas fa-paper-plane mr-2"></i>{t("SUBMIT_BUTTON")}</button>
 </form>
        </div>
        </div>

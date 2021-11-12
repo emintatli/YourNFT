@@ -56,49 +56,49 @@ function Control() {
       pauseOnHover/>
     <AdminNav active="main"/>
     <div className="card mt-1">
-    <nav class="level p-3">
-    <div class="level-item has-text-centered">
+    <nav className="level p-3">
+    <div className="level-item has-text-centered">
     <div>
-      <p class="heading">{t("ADMIN_CHAIN")}</p>
-      <p class="title">{contractData.chain}</p>
+      <p className="heading">{t("ADMIN_CHAIN")}</p>
+      <p className="title">{contractData.chain}</p>
     </div>
   </div>
-  <div class="level-item has-text-centered">
+  <div className="level-item has-text-centered">
     <div>
-      <p class="heading">{t("ADMIN_TOTAL_INCOME")}</p>
-      <p class="title">{parseFloat((contractData.minted*Web3.utils.fromWei(`${contractData.price}`,"ether"))).toFixed(3)} {t("CURRENCY")}</p>
+      <p className="heading">{t("ADMIN_TOTAL_INCOME")}</p>
+      <p className="title">{parseFloat((contractData.minted*Web3.utils.fromWei(`${contractData.price}`,"ether"))).toFixed(3)} {t("CURRENCY")}</p>
     </div>
   </div>
-  <div class="level-item has-text-centered">
+  <div className="level-item has-text-centered">
     <div>
-      <p class="heading">{t("ADMIN_NFT_PRICE")}</p>
-      <p class="title">{contractData.price&&Web3.utils.fromWei(contractData.price,"ether")} {t("CURRENCY")}</p>
-      <Link href="/admin/control/settings"><p class="is-size-6 is-underlined has-text-link"><i class="fas fa-edit mr-2"></i>{t("ADMIN_CHANGE")}</p></Link>
+      <p className="heading">{t("ADMIN_NFT_PRICE")}</p>
+      <p className="title">{contractData.price&&Web3.utils.fromWei(contractData.price,"ether")} {t("CURRENCY")}</p>
+      <Link href="/admin/control/settings"><p className="is-size-6 is-underlined has-text-link"><i className="fas fa-edit mr-2"></i>{t("ADMIN_CHANGE")}</p></Link>
     </div>
   </div>
-  <div class="level-item has-text-centered ">
+  <div className="level-item has-text-centered ">
     <div className="notification is-primary balance-padding">
-      <p class="heading">{t("ADMIN_CONTRACT_BALANCE")}</p>
-      <p class="title">{Web3.utils.fromWei(contractData.contract_balance,"ether")} {t("CURRENCY")}</p>
-      <button onClick={cashoutHandler} class="button is-light mt-2 is-small"><p class="is-size-6 "><i class="fas fa-coins mr-2"></i>{t("ADMIN_CASHOUT")}</p></button>
+      <p className="heading">{t("ADMIN_CONTRACT_BALANCE")}</p>
+      <p className="title">{Web3.utils.fromWei(contractData.contract_balance,"ether")} {t("CURRENCY")}</p>
+      <button onClick={cashoutHandler} className="button is-light mt-2 is-small"><p className="is-size-6 "><i className="fas fa-coins mr-2"></i>{t("ADMIN_CASHOUT")}</p></button>
     </div>
   </div>
 </nav>
 
     </div>
     <div className="card mt-1 p-3">
-    <p class="heading">{t("ADMIN_TOTAL_SALES")}</p>
+    <p className="heading">{t("ADMIN_TOTAL_SALES")}</p>
     
-    <p class="title mb-2">{contractData.minted}/{contractData.maxMintLimit}</p>
-    <progress class="progress is-success" value={contractData.minted} max={contractData.maxMintLimit}></progress>
+    <p className="title mb-2">{contractData.minted}/{contractData.maxMintLimit}</p>
+    <progress className="progress is-success" value={contractData.minted} max={contractData.maxMintLimit}></progress>
     </div>
     <div className="card mt-1 p-3">
     
-    <article class="message is-primary">
-  <div class="message-header">
+    <article className="message is-primary">
+  <div className="message-header">
     <p>{t("ADMIN_NOTIFICATION_TITLE")}</p>
   </div>
-  <div class="message-body">
+  <div className="message-body">
     {t("ADMIN_NOTIFICATION")}
        </div>
 </article>

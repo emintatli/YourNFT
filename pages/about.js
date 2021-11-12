@@ -8,17 +8,17 @@ function About() {
   const data=useSelector(state=>state.user.apiData);
     return (
      <Content bg="true">
-       <section class="hero is-link">
-  <div class="hero-body">
-    <p class="title">
+       <section className="hero is-link">
+  <div className="hero-body">
+    <p className="title">
     {t("ABOUT_TITLE")}
     </p>
-    <p class="subtitle">
+    <p className="subtitle">
       {t("ABOUT_TITLE_2")}
     </p>
   </div>
 </section>
-            {loading?<div class="message-body is-flex is-justify-content-center"><div class="lds-facebook"><div></div><div></div><div></div></div></div>:<div className="card">
+            {loading?<div className="message-body is-flex is-justify-content-center"><div className="lds-facebook"><div></div><div></div><div></div></div></div>:<div className="card">
        <div className="card-content">
        {data.pages&&data.pages.about}
        </div>

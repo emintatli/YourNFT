@@ -4,7 +4,7 @@ import {Provider} from "react-redux";
 import Navbar from '../components/navbar';
 import 'react-toastify/dist/ReactToastify.css';
 import Head from 'next/head';
-import './i18n';
+import '../i18n';
 function MyApp({ Component, pageProps }) {
   return <>
   <Provider store={players}>

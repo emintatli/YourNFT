@@ -9,18 +9,18 @@ function Documentation() {
     return (
       <Content bg="true">
          <div className="card">
-         <section class="hero is-primary">
-  <div class="hero-body">
-    <p class="title">
+         <section className="hero is-primary">
+  <div className="hero-body">
+    <p className="title">
     {t("DOCUMENTATION_TITLE")}
     </p>
-    <p class="subtitle">
+    <p className="subtitle">
     {t("OFFICAL_INFO_TITLE")}
     </p>
   </div>
 </section>
-{loading?<div class="message-body is-flex is-justify-content-center"><div class="lds-facebook"><div></div><div></div><div></div></div></div>:<div className="card p-3">
- {data&&data.pages.documentation}
+{loading?<div className="message-body is-flex is-justify-content-center"><div className="lds-facebook"><div></div><div></div><div></div></div></div>:<div className="card p-3">
+ {data.pages&&data.pages.documentation}
  </div>}
  
 </div>
