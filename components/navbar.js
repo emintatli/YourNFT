@@ -41,6 +41,7 @@ function Navbar(){
         method: 'wallet_switchEthereumChain',
         params: [{ chainId: info.chain }],
       });
+      await window.ethereum.request({ method: 'eth_requestAccounts' })
       const provider2=await detectEthereumProvider();
       const web3api2=new Web3(provider2);
       const account= (await web3api2.eth.getAccounts())[0];
@@ -67,6 +68,7 @@ function Navbar(){
       method: 'wallet_switchEthereumChain',
       params: [{ chainId: contractData.chain }],
     });
+    await window.ethereum.request({ method: 'eth_requestAccounts' })
     const provider=await detectEthereumProvider();
     const web3api=new Web3(provider);
     const account= (await web3api.eth.getAccounts())[0];
