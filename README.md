@@ -11,6 +11,10 @@
 *Change contract owner
 *Adding Single/Bulk NFT
 *NFTs are minted randomly from the ones you add.
+### Tech Stack
+->Next.js 
+->Web3.js
+->Solidity
 
 ### Demo
 ![image](https://user-images.githubusercontent.com/17429183/172044915-d69aeef0-0aaa-4052-b369-fc2183ef3730.png)
