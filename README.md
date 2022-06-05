@@ -1,34 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#### Your NFT highly customizable NFT minting platform.
 
-## Getting Started
+#### Features
+*Ethereum, Binance Smart Chain and Polygon support
+*Bulk NFT sale (mint transaction is done during sale)
+*NFT Price change
+*Creating a whitelist
+*Setting special prices for whitelist users
+*Receiving payment through the admin panel (Payments are taken upon contract)
+*Turkish/English language support
+*Change contract owner
+*Adding Single/Bulk NFT
+*NFTs are minted randomly from the ones you add.
 
-First, run the development server:
+### Demo
+![image](https://user-images.githubusercontent.com/17429183/172044915-d69aeef0-0aaa-4052-b369-fc2183ef3730.png)
+![image](https://user-images.githubusercontent.com/17429183/172044917-53b89178-0f9a-4e0c-bd07-5bd452a9d66b.png)
+![image](https://user-images.githubusercontent.com/17429183/172044918-b8f2ca91-5c7a-4746-8eed-fd064e039cd1.png)
+![image](https://user-images.githubusercontent.com/17429183/172044921-63a792f0-bc8b-4e58-b879-312c56322c88.png)
+![image](https://user-images.githubusercontent.com/17429183/172044922-b078cef8-032e-4490-bb6e-de31e0048f23.png)
+![image](https://user-images.githubusercontent.com/17429183/172044924-3facdc8d-b45d-4d8b-a6a9-01bb2defd108.png)
+![image](https://user-images.githubusercontent.com/17429183/172044926-f1fc506a-2752-4a37-b50e-2d94b5a396f3.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
